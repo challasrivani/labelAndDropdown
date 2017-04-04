@@ -1,0 +1,15 @@
+﻿<div class="ppmTopPanel">
+    <div>
+        <div class="lblClass" style="width: 120px;height: 32px;">{{labelText}}:</div>
+        <div class="styled-select" style="-webkit-border-radius: 5px; -moz-border-radius: 10px;">
+            <select id="ddl{{ddlName}}"
+                    ng-model="selectedItem"
+                    ng-init="selectedItem={{getOptionName(ddlContents[0], optionValueName)}}"
+                    ng-options="option.{{optionValueName}} as option.{{optionTextName}} for option in ddlContents track by option.{{optionValueName}}"
+                    ng-change="{{updateChange()}}" required>
+                <option value="" ng-if="false"></option>
+            </select>
+        </div>
+    </div>
+</div>
+
